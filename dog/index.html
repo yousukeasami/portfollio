@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset=utf-8>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+
+
+$(function(){
+
+	$html=$('html');
+	
+
+	$html.mouseover(function(a){
+
+
+		var px =a.pageX;
+		var py =a.pageY;
+		var positionx = px-10;
+		var positiony = py-10;
+
+
+		$('#circle').css({left:px+10,top:py-10}
+			);});
+
+	$html.click(function() {
+		
+		$( "#circle" ).animate({
+			left: "+=100"}
+    	,function(){
+
+    		$h=$('#phrase').html();
+
+    		 $h+= "くるな";
+    		$('#phrase').text($h);
+    		
+    	}
+
+  	);});
+
+
+	
+
+	});
+
+
+</script>
+
+</head>
+<body>
+	<div id="box">
+		<div>
+			<p id="phrase"></p>
+		</div>
+		<div id="circle">
+			<p><img src="wanwan.jpg"></p>
+			
+			
+		</div> 
+	</div>
+	</body>
+</html>
